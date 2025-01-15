@@ -1,0 +1,37 @@
+:host{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+   width: 300px;
+   background-color: rgb(100, 10, 61); 
+   padding: 5px;
+   border-radius: 5px;
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.buttons button{
+    width: 25%;
+    height: 40px;
+    color: white;
+    background-color: rgb(154, 153, 153);
+}
+.prev{
+    background-color: darkgray;
+    padding: 5px;
+    border: 2px soli rgb(94, 94, 94);
+    border-radius: 4px;
+    margin: 2px;
+}
+.current{
+    font-size: x-large;
+    background-color: rgb(211, 211, 211);
+    padding: 5px;
+    border: 2px soli rgb(84, 84, 84);
+    border-radius: 4px;
+    margin: 2px;
+}
