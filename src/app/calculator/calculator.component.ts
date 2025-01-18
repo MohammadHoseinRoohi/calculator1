@@ -9,17 +9,19 @@ import { Component } from '@angular/core';
 export class CalculatorComponent {
   current: string = '0';
   prev: string = '0';
+  db: number = 0;
   op: string = '';
   digit(d: string) {
     this.current = Number(this.current + d).toString();
   }
   operator(o: string) {
     this.prev = this.current;
+    this.db = this.db + Number(this.prev);
     this.current = '0';
     this.op = o;
   }
   equal() {
-    let a = Number(this.prev);
+    let a = this.db;
     let b = Number(this.current);
     switch (this.op) {
       case '+':
@@ -37,6 +39,8 @@ export class CalculatorComponent {
       default:
         break;
     }
+    this.db = 0;
+    this.op = '';
   }
   dot() {
     if (!this.current.includes('.')) {
@@ -48,7 +52,7 @@ export class CalculatorComponent {
   }
   AC() {
     this.current = '0';
-    this.prev = '0';
+    this.db = 0;
     this.op = '';
   }
   CE() {
@@ -61,7 +65,7 @@ export class CalculatorComponent {
       this.current = '0';
     }
     else {
-    this.current = d;
+      this.current = d;
     }
   }
 }
