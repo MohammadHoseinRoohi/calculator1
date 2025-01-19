@@ -2,25 +2,35 @@
     <div class="prev">{{db}} {{op}}</div>
     <div class="current">{{current}}</div>
     <div class="buttons">
-        <button (click)="pos_neg()">+/-</button>
-        <button (click)="CE()">CE</button>
-        <button (click)="AC()">AC</button>
         <button (click)="del()">DEL</button>
+        <button>M+</button>
+        <button>M-</button>
+        <button>Sin</button>
+        <button>Cos</button>
+        <button>tg</button>
+        <button>GT</button>
         <button (click)="digit('7')">7</button>
         <button (click)="digit('8')">8</button>
         <button (click)="digit('9')">9</button>
-        <button (click)="operator('+')">+</button>
+        <button (click)="operator('^')">^</button>
+        <button>Square</button>
+        <button (click)="pos_neg()">+/-</button>
         <button (click)="digit('4')">4</button>
         <button (click)="digit('5')">5</button>
         <button (click)="digit('6')">6</button>
-        <button (click)="operator('-')">-</button>
+        <button (click)="operator('X')">X</button>
+        <button (click)="operator('/')">/</button>
+        <button (click)="CE()">CE</button>
         <button (click)="digit('1')">1</button>
         <button (click)="digit('2')">2</button>
         <button (click)="digit('3')">3</button>
-        <button (click)="operator('X')">X</button>
-        <button (click)="dot()">.</button>
+        <button (click)="operator('+')">+</button>
+        <button (click)="operator('-')">-</button>
+        <button (click)="AC()">AC</button>
         <button (click)="digit('0')">0</button>
+        <button (click)="digit('00')">00</button>
+        <button (click)="digit('000')">000</button>
+        <button (click)="operator('+')">+</button>
         <button (click)="equal()">=</button>
-        <button (click)="operator('/')">/</button>
     </div>
 </div>
