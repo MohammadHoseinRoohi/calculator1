@@ -16,22 +16,22 @@ export class CalculatorComponent {
   }
   operator(o: string) {
     this.prev = this.current;
-    if (o == '-' && this.db!=0) {
+    if (o == '-' && this.db != 0) {
       this.db = this.db - Number(this.prev);
     }
-    else if (o=='X' && this.db!=0) {
+    else if (o == 'X' && this.db != 0) {
       this.db = this.db * Number(this.prev);
     }
-    else if (o=='/' && this.db!=0) {
+    else if (o == '/' && this.db != 0) {
       this.db = this.db / Number(this.prev);
     }
-    else if (o=='^' && this.db!=0) {
+    else if (o == '^' && this.db != 0) {
       this.db = Number(this.prev);
       for (let i = 1; i < Number(this.current); i++) {
-        this.db*=this.db;
+        this.db *= this.db;
       }
     }
-    else{
+    else {
       this.db = this.db + Number(this.prev);
     }
     this.current = '0';
@@ -54,7 +54,7 @@ export class CalculatorComponent {
         this.current = (a / b).toString();
         break;
       case '^':
-        this.current = (Math.pow(this.db,Number(this.current))).toString();
+        this.current = (Math.pow(this.db, Number(this.current))).toString();
         break;
       default:
         break;
@@ -87,5 +87,23 @@ export class CalculatorComponent {
     else {
       this.current = d;
     }
+  }
+  M_Plus(){
+
+  }
+  M_Minus(){
+
+  }
+  Sin(){
+
+  }
+  Cos(){
+
+  }
+  Tg(){
+
+  }
+  Square(){
+    
   }
 }
