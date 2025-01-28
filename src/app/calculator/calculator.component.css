@@ -1,33 +1,41 @@
-:host{
+:host {
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
-.calculator{
-   width: 360px;
-   background-color: rgb(138, 19, 86); 
-   padding: 5px;
-   border-radius: 5px;
+.calculator {
+    width: 360px;
+    background-color: rgb(138, 19, 86);
+    padding: 5px;
+    border-radius: 5px;
 }
-.buttons{
+.buttons {
     display: flex;
     flex-wrap: wrap;
 }
-.buttons button{
+span {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    font-size: 0.6em;
+    align-items: center;
+}
+.buttons button {
     width: 4.5em;
     height: 40px;
     color: white;
     background-color: rgb(153, 153, 153);
 }
-.prev{
+.prev {
+    display: flex;
     background-color: darkgray;
     padding: 5px;
     border: 2px soli rgb(92, 92, 92);
     border-radius: 4px;
     margin: 2px;
 }
-.current{
+.current {
     font-size: x-large;
     background-color: rgb(211, 211, 211);
     padding: 5px;

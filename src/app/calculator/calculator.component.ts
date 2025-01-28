@@ -11,6 +11,8 @@ export class CalculatorComponent {
   prev: string = '0';
   db: number = 0;
   op: string = '';
+  m: string = '';
+  opM: string = '';
   digit(d: string) {
     this.current = Number(this.current + d).toString();
   }
@@ -74,6 +76,7 @@ export class CalculatorComponent {
     this.current = '0';
     this.db = 0;
     this.op = '';
+    this.opM = '';
   }
   CE() {
     this.current = '0';
@@ -88,22 +91,47 @@ export class CalculatorComponent {
       this.current = d;
     }
   }
-  M_Plus(){
+  opMPlus(o: string) {
+    this.opM = o;
+    if (this.db!=0 && Number(this.current)!=0) {
+      this.operator(this.op);
+      this.m = this.db.toString();
+    }
+    else if (Number(this.current)!=0 && this.db==0) {
+      this.m = this.current;
+    }
+  }
+  opMMinus(o: string) {
+    this.opM = o;
+    if (this.db!=0 && Number(this.current)!=0) {
+      this.operator(this.op);
+      this.m = this.db.toString();
+    }
+    else if (Number(this.current)!=0 && this.db==0) {
+      this.m = this.current;
+    }
+  }
+  MR() {
+    if (this.db==0 && Number(this.current)==0) {
+      this.m =this.db.toString();
+    }
+    else{
+      this.current = this.m;
+    }
+    this.db = 0;
+    this.op = '';
+    this.opM = '';
+  }
+  Sin() {
 
   }
-  M_Minus(){
+  Cos() {
 
   }
-  Sin(){
+  Tg() {
 
   }
-  Cos(){
+  Square() {
 
-  }
-  Tg(){
-
-  }
-  Square(){
-    
   }
 }

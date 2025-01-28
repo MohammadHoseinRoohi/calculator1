@@ -1,14 +1,14 @@
 <div class="calculator">
-    <div class="prev">{{db}} {{op}}</div>
+    <div class="prev">{{db}} {{op}} <span>{{opM}}</span></div>
     <div class="current">{{current}}</div>
     <div class="buttons">
         <button (click)="del()">DEL</button>
-        <button>M+</button>
-        <button>M-</button>
+        <button (click)="opMPlus('M')">M+</button>
+        <button (click)="opMMinus('M')">M-</button>
         <button>Sin</button>
         <button>Cos</button>
         <button>tg</button>
-        <button>GT</button>
+        <button (click)="MR()">MR</button>
         <button (click)="digit('7')">7</button>
         <button (click)="digit('8')">8</button>
         <button (click)="digit('9')">9</button>
